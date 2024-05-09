@@ -1,6 +1,6 @@
-#################
+************************
 Brief COPE Questionnaire
-#################
+************************
 
 .. contents::
   :local:
@@ -42,6 +42,7 @@ o	*Substance use*: Using substances such as alcohol or drugs to cope.
 o	*Mental disengagement*: Avoiding thinking about the problem or distracting oneself mentally.
 
 Participants are asked to rate how often they use each coping strategy on a 4-point Likert scale ranging from "I haven't been doing this at all" to "I've been doing this a lot." The results can provide insights into an individual's preferred coping strategies and their overall coping style.
+
 ************
 References
 ************
