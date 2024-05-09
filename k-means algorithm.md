@@ -1,59 +1,73 @@
-# K-Means Clustering for the coping strategies of Brief COPE Questionnaire
-This repository contains the code and results of a `K-means clustering` implementation to extract different groups of `coping strategies` that influence `resilience`.  
 
-# Note: This repository is being built and will be completed in the next one day
-## Table of Contents
-+ Introduction
-+ Data
-+ Methodology
-+ Results
+# K-means clustering algorithm
 
-## Introduction
+*K-means clustering* is a highly efficient and commonly used algorithm for partitioning data into clusters, providing a qualitative interpretation of the data by grouping similar conditions together. 
 
-The [Brief COPE](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/cope.rst) is a widely used self-report questionnaire that assesses coping strategies individuals use when faced with stress or challenging situations. The questionnaire consists of 28 items that measure 14 coping strategies *Self-distraction, Denial, Substance Use, Behavioural disengagement, Emotional Support, Venting, Humour, Acceptance, Self-Blame, Religion, Active Coping, Use of Instrumental Support, Positive Reframing*, and *Planning*.
+<img src="figures/cluster1.JPG" width="800" height="300">
 
-Understanding coping strategies’ impact on psychological `well-being` is key to identifying strategies that may serve as resources for successful adaptation. Existing research has explored the relationship between coping styles and various mental health variables, such as resilience. `Resilience` might be seen as a personality trait—a positive, distinct feature of an individual that mitigates the negative effects of stress and minimizes episodes of depression. 
+To perform k-means clustering, the first step is to determine the desired number of clusters, denoted as *k*. The k-means algorithm will then assign each observation to one of the *k* clusters. The procedure is based on a straightforward and intuitive mathematical problem. Let's establish some notation: $C_{1}$, ... , $C_{k}$ represent sets containing the indices of observations in each cluster. If the $i$th observation belongs to the $k$th cluster, we say that $i ∈ C_{k}$.
 
-In this project, we apply the k-means clustering algorithm to cluster the coping strategies. The goal is to identify distinct groups of coping strategies that influence resilience. To do this, we first use different feature selection methods to extract important strategies that influence resilience. Then, we employ k-means clustering to cluster these coping strategies. Finally, by comparing the obtained clusters, strategies that can improve resilience are introduced.
+The fundamental idea behind k-means clustering is to achieve a clustering arrangement in which the *within-cluster variation* is minimized. The within-cluster variation for a cluster $C_{k}$, denoted as $W(C_{k})$, quantifies the extent to which observations within the cluster differ from each other. Consequently, our goal is to solve the following problem:
 
-## Data 
-We utilized a preexisting dataset provided by Konaszewski et al. (Konaszewski K, Niesiobędzka M, Surzykiewicz J. Resilience and mental health among juveniles: role of strategies for coping with stress. Health Qual Life Outcomes. 2021 Feb 18;19(1):58) https://doi.org/10.3886/E120001V1. They investigate the direct and indirect role of resilience in shaping the mental health of juveniles. The dataset includes resilience and 14 coping strategies. 
+<p align="center">
+	<img src="figures/eq1.JPG" width=200px>
+</p>
 
-## Methodology
-### Feature Selection
-Before applying k-means clustering, we employ various feature selection techniques to extract important coping strategies that significantly influence resilience. The selected coping strategies are then used as input for the clustering algorithm. [Notebook](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb)
-### Clustering 
-Once the relevant coping strategies are identified, we utilize the [k-means clustering algorithm](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/kmeans.rst) to group them into distinct clusters 
-based on their similarities. [Notebook](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb)
+In simple terms, this formula indicates that we aim to partition the observations into $K$ clusters such that the total within-cluster variation, summed over all $K$ clusters, is minimized.
 
-## Results
+While solving the above equation appears reasonable, it requires a definition of within-cluster variation to make it actionable. Various approaches exist for defining within-cluster variation, but the most widely adopted method involves *squared Euclidean distance*. Specifically, we define it as follows:
 
-**Summary of feature selection**: The main features that were particularly important in influencing resilience are: *Active_coping, Planning , Emotional_support, Positive_reframing, Acceptance, Behavioral_disengagement, Humor* and *Self_blame*.
+<p align="center">
+	<img src="figures/eq2.JPG" width=300px>
+</p>
 
-**K-means clustering**: Firstly, by using the Elbow method, three clusters were chosen. 
+Here, $|C_{k}|$ denotes the number of observations in the $k$th cluster. In essence, the within-cluster variation for the $k$th cluster is computed as the sum of all pairwise squared Euclidean distances between observations within the cluster, divided by the total number of observations in that cluster. The objective of the K-means algorithm is to minimize the `within-cluster sum of squares (WCSS)`, also known as inertia or distortion. 
 
-<img src="figures/elbow.JPG" width="800" height="400"> 
+<p align="center">
+	<img src="figures/eq3.JPG" width=300px>
+</p>
 
-Then, k-means was conducted and the mean values of the selected coping strategies in each cluster were obtained as 
+The algorithm achieves this by iteratively updating the centroids and reassigning data points to clusters. Here is the outline of the K-means algorithm:
 
-<img src="figures/coping.JPG" width="800" height="400"> 
+1. Randomly assign a number from $1$ to $k$ to each observation, serving as initial cluster assignments.
+2. Iterate until the cluster assignments no longer change:
+   
+   (a) For each of the $K$ clusters, compute the cluster centroid. The *k*th cluster centroid is determined by taking the vector of *p* feature means for the observations in that cluster.
+   
+   (b) Assign each observation to the cluster whose centroid is closest, where "closest" is defined using Euclidean distance.
 
-Further, the means of resilience in each cluster are obtained as 
+Let's understand the above steps by considering the visual plots:
+The algorithm initially selects *k* data points randomly from the dataset as the initial centroids, which act as representatives of the clusters. 
 
-<img src="figures/res.JPG" width="800" height="400"> 
+<img src="figures/k1.JPG" width="800" height="300">
 
-Based on these results, the main attributes of each cluster are summarized as follows:
+For each data point, the algorithm calculates the distance between the point and each centroid. 
 
-_Cluster 1_: This cluster includes juveniles with the most resilience. They had high average for Active_coping, Emotional_support, Acceptance, planning and Positive_reframing and low average in Behavioral_disengagement, Self_blame and Humor.
+<img src="figures/k2.JPG" width="800" height="300">
 
-_Cluster 2_: juveniles with the moderate resilience. This group had moderate average in almost all features and high average for Active_coping and Acceptance.
+The data point is assigned to the cluster whose centroid is closest to it. 
 
-_Cluster 0_: This group had the lowest value of resilience characteristic. Active_coping, Emotional_support, Acceptance, planning and Positive_reframing were minimum for these juveniles.
+<img src="figures/k3.JPG" width="800" height="300">
+
+After assigning all data points to clusters, new centroids are computed for each cluster by taking the mean of the data points assigned to that cluster. 
+
+<img src="figures/k4.JPG" width="800" height="300">
+
+This step updates the positions of the centroids. These steps are repeated until convergence is achieved. Convergence occurs when the centroids' positions stabilize (i.e., no significant change occurs between iterations) or when a maximum number of iterations is reached. 
+
+<img src="figures/k5.JPG" width="800" height="300">
+
+Upon convergence, the algorithm outputs the final centroids and the assignment of each data point to a cluster, representing the resulting clusters obtained from the K-means algorithm.
+
+<img src="figures/k6.JPG" width="800" height="300">
+
+## Elbow method
+An important aspect of k-means algorithm is the selection of the desired number of clusters, denoted as *k*. Several methods and heuristics exist to estimate the optimal number of clusters, such as the *elbow method* or *silhouette analysis*. The *elbow method* is a simple and intuitive technique that serves as a starting point for determining the optimal number of clusters in K-means clustering. This method relies on the observation that as the number of clusters increases, the WCSS typically decreases, as it measures the total distance between data points and their assigned cluster centroids. However, the decrease becomes less significant when the number of clusters becomes too large. To implement the elbow method, a range of values for *k* is chosen, starting with a small number and gradually increasing it. For each value of *k*, the K-means clustering algorithm is run, and the WCSS is calculated. A plot is then created with the number of clusters on the x-axis and the WCSS on the y-axis, often referred to as the elbow plot. The point on the plot where the WCSS starts to decrease at a slower rate is considered the elbow of the plot. The corresponding value of *k* at this point is considered the optimal number of clusters.
+
+<img src="figures/elbow2.JPG" width="800" height="300">
+
+### References
 
 
-
-
-
-
-
-
+1. https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning
+2. Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, (2013). An introduction to statistical learning : with applications in R. New York :Springer.
