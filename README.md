@@ -1,7 +1,7 @@
 # K-Means Clustering for the coping strategies of Brief COPE Questionnaire
 This repository contains the code and results of a `K-means clustering` implementation to extract different groups of `coping strategies` that influence `resilience`.  
 
-# Note: This repository is being built and will be completed in the next one day
+
 ## Table of Contents
 + Introduction
 + Data
