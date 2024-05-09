@@ -29,9 +29,17 @@ based on their similarities.
 
 **Summary of feature selection**: The main features that were particularly important in influencing resilience are: *Active_coping, Planning , Emotional_support, Positive_reframing, Acceptance, Behavioral_disengagement, Humor* and *Self_blame*.
 
-**K-means clustering**: Firstly, by using the Elbow method, three clusters were chosen. Then, k-means was conducted and the mean values of the selected coping strategies in each cluster were obtained as 
+**K-means clustering**: Firstly, by using the Elbow method, three clusters were chosen. 
+
+<img src="figures/elbow.JPG" width="800" height="400"> 
+
+Then, k-means was conducted and the mean values of the selected coping strategies in each cluster were obtained as 
+
+<img src="figures/coping.JPG" width="800" height="400"> 
 
 Further, the means of resilience in each cluster are obtained as 
+
+<img src="figures/res.JPG" width="800" height="400"> 
 
 Based on these results, the main attributes of each cluster are summarized as follows:
 
