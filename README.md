@@ -10,37 +10,7 @@ This repository contains the code and results of a `K-means clustering` implemen
 
 ## Introduction
 
-The `Brief COPE` is a widely used self-report questionnaire that assesses coping strategies individuals use when faced with stress or challenging situations. The questionnaire focuses on 14 different coping strategies:
-
-o	*Active coping*: Taking active steps to deal with the problem.
-
-o	*Planning*: Developing a plan of action to address the problem.
-
-o	*Using instrumental support*: Seeking practical assistance or advice from others.
-
-o	*Seeking informational support*: Gathering information to better understand the situation.
-
-o	*Venting*: Expressing negative emotions and seeking emotional support.
-
-o	*Positive reframing*: Finding positive aspects or silver linings in the situation.
-
-o	*Acceptance*: Accepting the reality of the situation and learning to live with it.
-
-o	*Religion*: Finding solace and support in religious or spiritual beliefs.
-
-o	*Self-distraction*: Distracting oneself from the problem through engaging in other activities.
-
-o	*Denial*: Refusing to accept or acknowledge the reality of the situation.
-
-o	*Behavioral disengagement*: Giving up or withdrawing from the situation.
-
-o	*Self-blame*: Blaming oneself for the problem or feeling guilty.
-
-o	*Substance use*: Using substances such as alcohol or drugs to cope.
-
-o	*Mental disengagement*: Avoiding thinking about the problem or distracting oneself mentally.
-
-Participants are asked to rate how often they use each coping strategy on a 4-point Likert scale ranging from "I haven't been doing this at all" to "I've been doing this a lot." The results can provide insights into an individual's preferred coping strategies and their overall coping style.
+The `[Brief COPE](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/cope.rst)` is a widely used self-report questionnaire that assesses coping strategies individuals use when faced with stress or challenging situations. The questionnaire consists of 28 items that measure 14 coping strategies *Self-distraction, Denial, Substance Use, Behavioural disengagement, Emotional Support, Venting, Humour, Acceptance, Self-Blame, Religion, Active Coping, Use of Instrumental Support, Positive Reframing*, and *Planning*.
 
 ### Objective
 
@@ -55,10 +25,8 @@ We utilized a preexisting dataset provided by Konaszewski et al. (Konaszewski K,
 ### Feature Selection
 Before applying k-means clustering, we employ various feature selection techniques to extract important coping strategies that significantly influence resilience. The selected coping strategies are then used as input for the clustering algorithm.
 ### Clustering 
-Once the relevant coping strategies are identified, we utilize the k-means clustering algorithm to group them into distinct clusters 
-based on their similarities. ( `Overview <Intro_>`_ 
-
-.. _Intro: kmeans.rst
+Once the relevant coping strategies are identified, we utilize the [k-means clustering algorithm](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/kmeans.rst) to group them into distinct clusters 
+based on their similarities. 
 
 ## Results
 
