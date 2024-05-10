@@ -28,7 +28,9 @@ based on their similarities. [Notebook](https://github.com/AbbasPak/K-Means-Clus
 
 ## Results
 
-**Summary of feature selection**: The main features that were particularly important in influencing resilience are: *Active_coping, Planning , Emotional_support, Positive_reframing, Acceptance, Behavioral_disengagement, Humor* and *Self_blame*.
+**Summary of feature selection**: From the correlation matrix of data, it was observed that the variables 'Self_distraction', 'Active_coping', 'Emotional_support', 'UIS', 'Behavioral_disengagement', 'Positive_reframing', 'Planning', 'Acceptance' have substantial correlation with "resilience".
+
+To sum up, the main features that were particularly important in influencing resilience are: *Active_coping, Planning , Emotional_support, Positive_reframing, Acceptance, Behavioral_disengagement, Humor* and *Self_blame*.
 
 **K-means clustering**: Firstly, by using the Elbow method, three clusters were chosen. 
 
