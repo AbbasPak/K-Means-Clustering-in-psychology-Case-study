@@ -5,7 +5,7 @@
 
 <img src="figures/cluster1.JPG" width="800" height="300">
 
-To perform k-means clustering, the first step is to determine the desired number of clusters, denoted as *k*. The k-means algorithm will then assign each observation to one of the *k* clusters. The procedure is based on a straightforward and intuitive mathematical problem. Let's establish some notation: $C_{1}$, ... , $C_{k}$ represent sets containing the indices of observations in each cluster. If the $i$th observation belongs to the $k$th cluster, we say that $i ∈ C_{k}$.
+To perform k-means clustering, the first step is to determine the desired number of clusters, denoted as $k$. The k-means algorithm will then assign each observation to one of the $k$ clusters. The procedure is based on a straightforward and intuitive mathematical problem. Let's establish some notation: $C_{1}$, ... , $C_{k}$ represent sets containing the indices of observations in each cluster. If the $i$-th observation belongs to the $k$-th cluster, we say that $i ∈ C_{k}$.
 
 The fundamental idea behind k-means clustering is to achieve a clustering arrangement in which the *within-cluster variation* is minimized. The within-cluster variation for a cluster $C_{k}$, denoted as $W(C_{k})$, quantifies the extent to which observations within the cluster differ from each other. Consequently, our goal is to solve the following problem:
 
@@ -32,7 +32,7 @@ The algorithm achieves this by iteratively updating the centroids and reassignin
 1. Randomly assign a number from $1$ to $k$ to each observation, serving as initial cluster assignments.
 2. Iterate until the cluster assignments no longer change:
    
-   (a) For each of the $K$ clusters, compute the cluster centroid. The *k*th cluster centroid is determined by taking the vector of *p* feature means for the observations in that cluster.
+   (a) For each of the $k$ clusters, compute the cluster centroid. The $k$th cluster centroid is determined by taking the vector of $p$ feature means for the observations in that cluster.
    
    (b) Assign each observation to the cluster whose centroid is closest, where "closest" is defined using Euclidean distance.
 
