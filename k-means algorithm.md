@@ -39,27 +39,27 @@ The algorithm achieves this by iteratively updating the centroids and reassignin
 Let's understand the above steps by considering the visual plots:
 The algorithm initially selects *k* data points randomly from the dataset as the initial centroids, which act as representatives of the clusters. 
 
-<img src="figures/k1.JPG" width="800" height="300">
+<img src="figures/k1.JPG" width="600" height="300">
 
 For each data point, the algorithm calculates the distance between the point and each centroid. 
 
-<img src="figures/k2.JPG" width="800" height="300">
+<img src="figures/k2.JPG" width="600" height="300">
 
 The data point is assigned to the cluster whose centroid is closest to it. 
 
-<img src="figures/k3.JPG" width="800" height="300">
+<img src="figures/k3.JPG" width="600" height="300">
 
 After assigning all data points to clusters, new centroids are computed for each cluster by taking the mean of the data points assigned to that cluster. 
 
-<img src="figures/k4.JPG" width="800" height="300">
+<img src="figures/k4.JPG" width="600" height="300">
 
 This step updates the positions of the centroids. These steps are repeated until convergence is achieved. Convergence occurs when the centroids' positions stabilize (i.e., no significant change occurs between iterations) or when a maximum number of iterations is reached. 
 
-<img src="figures/k5.JPG" width="800" height="300">
+<img src="figures/k5.JPG" width="600" height="300">
 
 Upon convergence, the algorithm outputs the final centroids and the assignment of each data point to a cluster, representing the resulting clusters obtained from the K-means algorithm.
 
-<img src="figures/k6.JPG" width="800" height="300">
+<img src="figures/k6.JPG" width="600" height="300">
 
 ## Elbow method
 An important aspect of k-means algorithm is the selection of the desired number of clusters, denoted as *k*. Several methods and heuristics exist to estimate the optimal number of clusters, such as the *elbow method* or *silhouette analysis*. The *elbow method* is a simple and intuitive technique that serves as a starting point for determining the optimal number of clusters in K-means clustering. This method relies on the observation that as the number of clusters increases, the WCSS typically decreases, as it measures the total distance between data points and their assigned cluster centroids. However, the decrease becomes less significant when the number of clusters becomes too large. To implement the elbow method, a range of values for *k* is chosen, starting with a small number and gradually increasing it. For each value of *k*, the K-means clustering algorithm is run, and the WCSS is calculated. A plot is then created with the number of clusters on the x-axis and the WCSS on the y-axis, often referred to as the elbow plot. The point on the plot where the WCSS starts to decrease at a slower rate is considered the elbow of the plot. The corresponding value of *k* at this point is considered the optimal number of clusters.
