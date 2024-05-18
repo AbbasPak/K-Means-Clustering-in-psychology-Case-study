@@ -5,6 +5,9 @@
 The goal of clustering is to partition observations into distinct groups where the members of each group are highly similar to one another, yet significantly different from members of other groups. To achieve this, it’s essential to define what makes observations similar or different, which typically involves identifying patterns in an unlabeled data set, such as shape, size, color, or behavior. As an unsupervised learning method, clustering operates without predefined labels or guidance, analyzing the data independently.
 
 <img src="figures/clusterfin.JPG" width="600" height="300"> 
+[ref](https://www.javatpoint.com/clustering-in-machine-learning)
+
+
 
 One practical application of clustering is in marketing, where we might analyze various metrics (e.g., median household income, occupation, proximity to urban areas) 
 for a large population. The objective here is to perform market segmentation, grouping individuals into clusters that are more likely to respond 
@@ -19,12 +22,14 @@ which partitions the data set into a predefined number of groups (k).
 Each cluster center is determined so that the distance between data points within a cluster is minimized compared to points in other clusters.
 
 <img src="figures/clusterpar.JPG" width="600" height="300"> 
+[ref](https://www.javatpoint.com/clustering-in-machine-learning)
 
 3.	*Density-Based Clustering*: This approach connects dense regions of data into clusters, forming arbitrarily shaped distributions as long as dense regions are connected. 
 By identifying high-density clusters separated by sparser areas, these methods can struggle with varying densities and high-dimensional data. 
 An example is the `DBSCAN` algorithm.
 
 <img src="figures/clusterden.JPG" width="600" height="300"> 
+[ref](https://www.javatpoint.com/clustering-in-machine-learning)
 
 4.	*Distribution Model-Based Clustering*: This method clusters data based on the probability of belonging to a particular distribution, 
 often assuming Gaussian distributions. A notable example is the Expectation-Maximization algorithm using `Gaussian Mixture Models` (GMM).
