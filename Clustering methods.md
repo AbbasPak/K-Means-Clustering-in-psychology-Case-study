@@ -37,7 +37,11 @@ level by cutting the dendrogram at the appropriate point. The Agglomerative Hier
 The Fuzzy C-Means algorithm, also known as `Fuzzy K-Means`, is an example.
 These diverse clustering techniques enable the analysis and segmentation of data sets in various ways, each with its unique strengths and applications.
 
+### References
 
+1. https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning
+2. Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, (2013). 
+An introduction to statistical learning : with applications in R. New York :Springer.
 
 
 
