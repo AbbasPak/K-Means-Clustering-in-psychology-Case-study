@@ -64,21 +64,29 @@ Step 2: The two clusters that are most similar to each other are then merged, re
  
 Step 3: Step 2 is repeated, merging the two most similar clusters at each step, until all observations belong to a single cluster, completing the dendrogram.
 
+Figure 
 
-##### Measure for the distance between two clusters
+#### Measure for the distance between two clusters
 
 The key challenge is how to define the dissimilarity between two clusters, when one or both contain multiple observations. This is addressed by the concept of linkage, which specifies how to extend the pairwise dissimilarity measure to groups of observations. The four most common types of linkage are:
 
 1. *Complete linkage*: The dissimilarity between two clusters is the maximum of all pairwise dissimilarities between observations in the two clusters.
 
+<img src="figures/lincom.JPG" width="600" height="300"> 
    
 2. *Single linkage*: The dissimilarity between two clusters is the minimum of all pairwise dissimilarities between observations in the two clusters. This can lead to elongated, "chaining" clusters.
 
+
+ <img src="figures/linsin.JPG" width="600" height="300"> 
  
 3. *Average linkage*: The dissimilarity between two clusters is the average of all pairwise dissimilarities between observations in the two clusters.
 
+<img src="figures/linave.JPG" width="600" height="300"> 
+
 
 4. *Centroid linkage*: The dissimilarity between two clusters is the dissimilarity between their centroids (the mean vectors of the observations in each cluster). This can sometimes result in undesirable inversions in the dendrogram.
+
+<img src="figures/linsen.JPG" width="600" height="300"> 
 
 ### References
 
