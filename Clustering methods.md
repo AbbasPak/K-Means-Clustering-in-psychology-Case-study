@@ -54,6 +54,32 @@ When trying to learn a hierarchy from data, there are two approaches:
 
 + Divisive: This approach is the opposite of the agglomerative approach and is top-down. That is, it starts with all items in a cluster and recursively divides them into clusters until each item is in its own cluster.
 
+#### How the Agglomerative Hierarchical clustering Work?
+
+The hierarchical clustering dendrogram is constructed through a straightforward algorithm. First, we define a measure of dissimilarity between each pair of observations, often using Euclidean distance. The algorithm then proceeds iteratively:
+
+Step 1: Initially, each of the n observations is treated as its own cluster.
+ 
+Step 2: The two clusters that are most similar to each other are then merged, resulting in n-1 clusters.
+ 
+Step 3: Step 2 is repeated, merging the two most similar clusters at each step, until all observations belong to a single cluster, completing the dendrogram.
+
+
+##### Measure for the distance between two clusters
+
+The key challenge is how to define the dissimilarity between two clusters, when one or both contain multiple observations. This is addressed by the concept of linkage, which specifies how to extend the pairwise dissimilarity measure to groups of observations. The four most common types of linkage are:
+
+1. *Complete linkage*: The dissimilarity between two clusters is the maximum of all pairwise dissimilarities between observations in the two clusters.
+
+   
+2. *Single linkage*: The dissimilarity between two clusters is the minimum of all pairwise dissimilarities between observations in the two clusters. This can lead to elongated, "chaining" clusters.
+
+ 
+3. *Average linkage*: The dissimilarity between two clusters is the average of all pairwise dissimilarities between observations in the two clusters.
+
+
+4. *Centroid linkage*: The dissimilarity between two clusters is the dissimilarity between their centroids (the mean vectors of the observations in each cluster). This can sometimes result in undesirable inversions in the dendrogram.
+
 ### References
 
 1. https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning
