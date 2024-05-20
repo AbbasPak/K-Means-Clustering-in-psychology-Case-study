@@ -86,7 +86,7 @@ The key challenge is how to define the dissimilarity between two clusters, when 
 
 4. *Centroid linkage*: The dissimilarity between two clusters is the dissimilarity between their centroids (the mean vectors of the observations in each cluster). This can sometimes result in undesirable inversions in the dendrogram.
 
-<img src="figures/linsen.JPG" width="600" height="300"> 
+<img src="figures/lincen.JPG" width="600" height="300"> 
 
 ### References
 
