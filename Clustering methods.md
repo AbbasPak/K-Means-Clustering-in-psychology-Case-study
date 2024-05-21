@@ -88,11 +88,22 @@ The key challenge is how to define the dissimilarity between two clusters, when 
 
 ### Woking of Dendrogram in Hierarchical clustering
 
-Presented in the below figure, six observations $(1, 2), (1, 3), (2,1), (4, 5), (5, 4), (6,7)$ denoted as $O_{0},…,O_{5}$. Illustration of the steps of the hierarchical clustering algorithm, using this data, with Single linkage and Euclidean distance is showen as follows: 
+Presented in the below figure, six observations $O_{0},…,O_{5}$ are clustered. 
 
-Left: Each of the points $O_{0},…,O_{5}$ is considered as separate cluster. Right: The datapoints $O_{0}$ and $O_{1}$ combine together and form a cluster, correspondingly a dendrogram is created, which connects $O_{0}$ and $O_{1}$ with a rectangular shape. The hight is decided according to the Euclidean distance between the data points.
+<img src="figures/hirarasli.JPG" width="600" height="300"> 
+
+Illustration of the steps of the agglomerative hierarchical clustering algorithm with Single linkage and Euclidean distance is showen as follows: 
+
+
+<img src="figures/hi1.JPG" width="600" height="300"> 
+
+Left: Each of the points $O_{0},…,O_{5}$ is considered as a separate cluster. Right: The datapoints $O_{0}$ and $O_{1}$ combine together and form a cluster, correspondingly a dendrogram is created, which connects $O_{0}$ and $O_{1}$ with a rectangular shape. The hight is decided according to the Euclidean distance between the data points.
+
+<img src="figures/hi2.JPG" width="600" height="300"> 
 
 Left: The two clusters  $O_{3}$ and $O_{4}$  form a cluster, and the corresponding dendrogram is created. It is higher than of previous, as the Euclidean distance between $O_{3}$ and $O_{4}$ is a little bit greater than the $O_{0}$ and $O_{1}$. Right: New dendrograms are created that combine $O_{0}$, $O_{1}$ and $O_{2}$ in one dendrogram. 
+
+<img src="figures/hi3.JPG" width="600" height="300"> 
 
 Left: New dendrograms are created that combine $O_{3}$, $O_{4}$ and $O_{5}$  in one dendrogram. Right: At last, the final dendrogram is created that combines all the data points together.
 
