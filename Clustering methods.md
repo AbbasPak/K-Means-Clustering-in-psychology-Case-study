@@ -88,7 +88,7 @@ The key challenge is how to define the dissimilarity between two clusters, when 
 
 ### Woking of Dendrogram in Hierarchical clustering
 
-Presented in the below figure, six observations $O_{0},…,O_{5}$ are clustered. 
+Presented in the below figure, six observations $O_{0},…,O_{5}$ are clustered by using Single linkage and Euclidean distance. 
 
 <img src="figures/hirarasli.JPG" width="600" height="300"> 
 
