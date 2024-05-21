@@ -64,8 +64,6 @@ Step 2: The two clusters that are most similar to each other are then merged, re
  
 Step 3: Step 2 is repeated, merging the two most similar clusters at each step, until all observations belong to a single cluster, completing the dendrogram.
 
-Figure 
-
 #### Measure for the distance between two clusters
 
 The key challenge is how to define the dissimilarity between two clusters, when one or both contain multiple observations. This is addressed by the concept of linkage, which specifies how to extend the pairwise dissimilarity measure to groups of observations. The four most common types of linkage are:
@@ -87,6 +85,17 @@ The key challenge is how to define the dissimilarity between two clusters, when 
 4. *Centroid linkage*: The dissimilarity between two clusters is the dissimilarity between their centroids (the mean vectors of the observations in each cluster). This can sometimes result in undesirable inversions in the dendrogram.
 
 <img src="figures/lincen.JPG" width="600" height="300"> 
+
+### Woking of Dendrogram in Hierarchical clustering
+
+Presented in the below figure, six observations $(1, 2), (1, 3), (2,1), (4, 5), (5, 4), (6,7)$ denoted as $O_{0},…,O_{5}$. Illustration of the steps of the hierarchical clustering algorithm, using this data, with Single linkage and Euclidean distance is showen as follows: 
+
+Left: Each of the points $O_{0},…,O_{5}$ is considered as separate cluster. Right: The datapoints $O_{0}$ and $O_{1}$ combine together and form a cluster, correspondingly a dendrogram is created, which connects $O_{0}$ and $O_{1}$ with a rectangular shape. The hight is decided according to the Euclidean distance between the data points.
+
+Left: The two clusters  $O_{3}$ and $O_{4}$  form a cluster, and the corresponding dendrogram is created. It is higher than of previous, as the Euclidean distance between $O_{3}$ and $O_{4}$ is a little bit greater than the $O_{0}$ and $O_{1}$. Right: New dendrograms are created that combine $O_{0}$, $O_{1}$ and $O_{2}$ in one dendrogram. 
+
+Left: New dendrograms are created that combine $O_{3}$, $O_{4}$ and $O_{5}$  in one dendrogram. Right: At last, the final dendrogram is created that combines all the data points together.
+
 
 ### References
 
