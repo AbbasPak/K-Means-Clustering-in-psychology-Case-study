@@ -113,6 +113,8 @@ Left: New dendrograms are created that combine $O_{3}$, $O_{4}$ and $O_{5}$  in 
 The key aspect of DBSCAN is that it can identify and exclude data points that are considered "noise" or outliers - those that do not belong to any dense cluster. This makes DBSCAN well-suited for tasks like outlier detection, as it can identify data points that lie outside the main groups or clusters.
 In contrast, K-Means Clustering is very sensitive to outliers. Since it tries to create spherical clusters, the introduction of a single outlier can significantly impact the resulting clusters. DBSCAN, on the other hand, is more robust to outliers and can identify clusters of arbitrary shape, not just spherical ones.
 Overall, DBSCAN is a powerful clustering algorithm that excels at handling noisy data and finding clusters of varying densities and shapes, making it a valuable tool in many data analysis and machine learning applications.
+<img src="figures/db1.JPG" width="600" height="300"> 
+[ref](https://www.geeksforgeeks.org/dbscan-clustering-in-ml-density-based-clustering/)
 
 
 ### References
