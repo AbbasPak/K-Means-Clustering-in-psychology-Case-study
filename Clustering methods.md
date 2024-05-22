@@ -107,6 +107,13 @@ Left: The two clusters  $O_{3}$ and $O_{4}$  form a cluster, and the correspondi
 
 Left: New dendrograms are created that combine $O_{3}$, $O_{4}$ and $O_{5}$  in one dendrogram. Right: At last, the final dendrogram is created that combines all the data points together.
 
+## DBSCAN Clustering
+
+`DBSCAN` (Density-Based Spatial Clustering Application with Noise) is an unsupervised machine learning algorithm used for clustering data. Unlike algorithms like K-Means Clustering, DBSCAN groups together data points that are close to each other based on density, rather than trying to create spherical clusters.
+The key aspect of DBSCAN is that it can identify and exclude data points that are considered "noise" or outliers - those that do not belong to any dense cluster. This makes DBSCAN well-suited for tasks like outlier detection, as it can identify data points that lie outside the main groups or clusters.
+In contrast, K-Means Clustering is very sensitive to outliers. Since it tries to create spherical clusters, the introduction of a single outlier can significantly impact the resulting clusters. DBSCAN, on the other hand, is more robust to outliers and can identify clusters of arbitrary shape, not just spherical ones.
+Overall, DBSCAN is a powerful clustering algorithm that excels at handling noisy data and finding clusters of varying densities and shapes, making it a valuable tool in many data analysis and machine learning applications.
+
 
 ### References
 
