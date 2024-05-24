@@ -92,7 +92,7 @@ Presented in the below figure, six observations $O_{0},…,O_{5}$ are clustered 
 
 <img src="figures/hirarasli.JPG" width="600" height="300"> 
 
-Illustration of the steps of the agglomerative hierarchical clustering algorithm with Single linkage and Euclidean distance is showen as follows: 
+Illustration of the steps of the agglomerative hierarchical clustering algorithm with Single linkage and Euclidean distance is shown as follows: 
 
 
 <img src="figures/hi1.JPG" width="600" height="300"> 
