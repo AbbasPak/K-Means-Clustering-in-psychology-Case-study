@@ -138,6 +138,8 @@ Overall, DBSCAN is a powerful clustering algorithm that excels at handling noisy
 DBSCAN requires two parameters:
 1.	eps (ε): Defines the neighborhood radius around a data point. Points within this radius are considered neighbors. Choosing the right value is crucial; too small, and many points will be marked as noise; too large, and distinct clusters may merge. One way to find the eps value is based on the *k-distance graph*.
 2.	MinPts: The minimum number of points required to form a dense region. This value should generally be at least the number of dimensions plus one. The larger the dataset, the larger value of MinPts must be chosen. The minimum value of MinPts must be chosen at least 3.
+
+DBSCAN is highly sensitive to the choice of the epsilon (ε) and minPoints parameters. Selecting appropriate values for these hyperparameters is crucial, as small variations can significantly impact the clustering results produced by the DBSCAN algorithm. The value of epsilon (ε) can be determined using the k-distance graph. This graph plots the distance of each data point to its kth nearest neighbor. The "elbow" or point of maximum curvature in this graph typically indicates the appropriate value of epsilon to use. If the chosen epsilon value is too small, DBSCAN will identify a larger number of clusters, with more data points being classified as noise. Conversely, if epsilon is set too high, smaller clusters will merge into a single large cluster, resulting in a loss of detailed cluster structure.
    
 ### Key Concepts
 DBSCAN classifies points into three categories:
@@ -151,7 +153,9 @@ DBSCAN classifies points into three categories:
 <img src="figures/db2.JPG" width="600" height="300"> 
 [ref](https://www.geeksforgeeks.org/dbscan-clustering-in-ml-density-based-clustering/)
 
-### Reachability and Connectivity
+##### Reachability and Connectivity
+
+Reachability states if a data point can be accessed from another data point directly or indirectly, whereas connectivity states whether two data points belong to the same cluster or not. In terms of reachability and connectivity, two points in DBSCAN can be referred to as:
 
 •	Directly Density-Reachable: Point X is directly density-reachable from point Y if X is within eps of Y and Y is a core point.
 
