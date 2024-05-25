@@ -136,8 +136,9 @@ Overall, DBSCAN is a powerful clustering algorithm that excels at handling noisy
 
 ### How DBSCAN Works
 DBSCAN requires two parameters:
-1.	eps (ε): Defines the neighborhood radius around a data point. Points within this radius are considered neighbors. Choosing the right value is crucial; too small, and many points will be marked as noise; too large, and distinct clusters may merge.
-2.	MinPts: The minimum number of points required to form a dense region. This value should generally be at least the number of dimensions plus one.
+1.	eps (ε): Defines the neighborhood radius around a data point. Points within this radius are considered neighbors. Choosing the right value is crucial; too small, and many points will be marked as noise; too large, and distinct clusters may merge. One way to find the eps value is based on the *k-distance graph*.
+2.	MinPts: The minimum number of points required to form a dense region. This value should generally be at least the number of dimensions plus one. The larger the dataset, the larger value of MinPts must be chosen. The minimum value of MinPts must be chosen at least 3.
+   
 ### Key Concepts
 DBSCAN classifies points into three categories:
 
