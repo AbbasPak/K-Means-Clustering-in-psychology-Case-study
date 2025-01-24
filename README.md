@@ -1,5 +1,5 @@
 # K-Means Clustering for the coping strategies of Brief COPE Questionnaire
-This repository contains the [codes](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb) and results of a `K-means clustering` implementation to extract different groups of `coping strategies` that influence `resilience`.  
+This repository contains the [codes](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb) and results of a `K-means clustering` implementation to extract different groups of juveniles based on their `coping strategies` and `resilience`.  
 
 
 ## Table of Contents
