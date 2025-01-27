@@ -23,7 +23,7 @@ We utilized a preexisting dataset provided by Konaszewski et al. (Konaszewski K,
 ### Feature Selection
 Before applying k-means clustering, we employ various feature selection techniques to extract important coping strategies that significantly influence resilience. The selected coping strategies are then used as input for the clustering algorithm. [Notebook](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb)
 ### Clustering 
-Once the relevant coping strategies are identified, we utilize them [k-means clustering algorithm](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/k-means%20algorithm.md) to group juveniles into distinct clusters 
+Once the relevant coping strategies are identified, we utilize  [k-means clustering algorithm](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/k-means%20algorithm.md) to group juveniles into distinct clusters 
 based on their similarities. [Notebook](https://github.com/AbbasPak/K-Means-Clustering-in-psychology-Case-study/blob/main/clustering%20coping.ipynb)
 
 ## Results
